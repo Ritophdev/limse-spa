@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limse — Limpieza Inteligente</title>
+  <link rel="icon" type="image/png" href="./img/logo-limse.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="header">
+  <div class="container">
+
+    <img src="./logo/logo-limse.png" class="logo" alt="Limse">
+
+    <!-- Botón hamburguesa SOLO móvil -->
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <!-- NAV -->
+    <nav id="navMenu">
+      <a href="#servicios">Servicios</a>
+      <a href="#reserva">Reserva</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+  </div>
+</header>
+
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Tu hogar limpio, sin complicaciones</h1>
+        <p>Reserva un servicio de limpieza profesional en minutos.</p>
+        <a href="#reserva" class="btn-primary">Reservar ahora</a>
+      </div>
+    </section>
+
+    <section id="servicios" class="services container">
+      <h2>Servicios Disponibles</h2>
+      <div class="service-grid">
+        <div class="card">
+          <h3>Básico</h3>
+          <p>Limpieza estándar del hogar. Ideal para mantener tu espacio fresco y ordenado.</p>
+        </div>
+        <div class="card">
+          <h3>Profunda</h3>
+          <p>Limpieza intensiva en áreas críticas como cocina y baño.</p>
+        </div>
+        <div class="card">
+          <h3>Post-evento</h3>
+          <p>Desinfección y limpieza completa después de reuniones o celebraciones.</p>
+        </div>
+        <div class="card">
+          <h3>Personalizado</h3>
+          <p>Elige las tareas específicas que necesitas (vidrios, planchado, etc.).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reserva" class="booking container">
+      <h2>Reserva tu limpieza</h2>
+      <form id="bookingForm">
+        <label>
+          <span>Nombre completo</span>
+          <input type="text" id="name" placeholder="Ej: Juan Pérez" required />
+        </label>
+
+        <label>
+          <span>WhatsApp</span>
+          <input type="tel" id="phone" placeholder="+56912345678" required />
+        </label>
+
+        <label>
+          <span>Servicio</span>
+          <select id="service" required>
+            <option value="">Selecciona un servicio</option>
+            <option value="Básico">Básico</option>
+            <option value="Profunda">Profunda</option>
+            <option value="Post-evento">Post-evento</option>
+            <option value="Personalizado">Personalizado</option>
+          </select>
+        </label>
+
+        <div class="row">
+          <label>
+            <span>Fecha</span>
+            <input type="date" id="date" required />
+          </label>
+          <label>
+            <span>Hora</span>
+            <input type="time" id="time" required />
+          </label>
+        </div>
+
+        <label>
+          <span>Dirección</span>
+          <input type="text" id="address" placeholder="Av. Siempre Viva 742" required />
+        </label>
+
+        <label>
+          <span>Notas adicionales</span>
+          <textarea id="notes" rows="3" placeholder="Ej: traer productos ecológicos..."></textarea>
+        </label>
+
+        <button type="submit" class="btn-primary wide">Enviar Reserva</button>
+      </form>
+      <p id="formMsg" class="msg"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Limse. Todos los derechos reservados.</p>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

@@ -40,3 +40,12 @@ form.addEventListener("submit", async (e) => {
     msg.style.color = "red";
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("menuBtn");
+  const nav = document.getElementById("navMenu");
+
+  btn.addEventListener("click", () => {
+    nav.classList.toggle("open");  // ← ESTA ES LA CLAVE
+  });
+});
